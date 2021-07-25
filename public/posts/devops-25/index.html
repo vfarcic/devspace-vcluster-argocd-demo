@@ -1,0 +1,162 @@
+<!DOCTYPE HTML>
+<html>
+
+    <head>
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+	<meta name="description" content="Books and courses dedicated to DevOps practices and tools">
+	<meta name="author" content="Viktor Farcic">
+	<meta name="generator" content="Hugo 0.78.2" />
+	<title>The DevOps 2.5 Toolkit &middot; The DevOps Toolkit Series</title>
+	<!-- Stylesheets -->
+	
+	<link rel="stylesheet" href="/css/main.css"/>
+	
+	
+
+	
+
+	<!-- Custom Fonts -->
+	<link href="/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+	
+	<link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
+	<link rel="icon" type="image/x-icon" href="/favicon.ico">
+	
+
+	<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+	<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+	<!--[if lt IE 9]>
+	<script src="js/ie/html5shiv.js"></script>
+	<script src="js/ie/html5shiv.jsrespond.min.js"></script>
+	<![endif]-->
+	
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-174219852-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+
+</head>
+
+    <body>
+
+    <!-- Wrapper -->
+        <div id="wrapper">
+
+            <!-- Header -->
+    <header id="header" class="alt">
+        <a href="/" class="logo"><strong>The DevOps Toolkit</strong> <span>By Viktor Farcic</span></a>
+        <nav>
+            <a href="#menu">Menu</a>
+        </nav>
+    </header>
+
+<!-- Menu -->
+    <nav id="menu">
+        <ul class="links">
+            
+                <li><a href="/">Home</a></li>
+            
+
+        </ul>
+        <ul class="actions vertical">
+            
+            
+        </ul>
+    </nav>
+
+        <!-- Main -->
+            <div id="main" class="alt">
+
+                
+                    <section id="one">
+                        <div class="inner">
+                            <header class="major">
+                                <h1>The DevOps 2.5 Toolkit</h1>
+                            </header>
+                            
+                            <h2 id="monitoring-logging-and-auto-scaling-kubernetes">Monitoring, Logging, and Auto-Scaling Kubernetes</h2>
+<h3 id="making-resilient-self-adaptive-and-autonomous-kubernetes-clusters">Making Resilient, Self-Adaptive, And Autonomous Kubernetes Clusters</h3>
+<p>Buy it now from <strong><a href="https://amzn.to/2RMKNVT">Amazon</a></strong>, <strong><a href="https://leanpub.com/the-devops-2-5-toolkit">LeanPub</a></strong>, or look for it through your favorite book seller.</p>
+<p><img src="/img/devops25-smaller.jpg#floatright" alt=""></p>
+<p>What do we do in Kubernetes after we master deployments and automate all the processes? We dive into monitoring, logging, auto-scaling, and other topics aimed at making our cluster resilient, self-sufficient, and self-adaptive.</p>
+<p>Kubernetes is probably the biggest project we know. It is vast, and yet many think that after a few weeks or months of reading and practice they know all there is to know about it. It&rsquo;s much bigger than that, and it is growing faster than most of us can follow. How far did you get in Kubernetes adoption?</p>
+<p>From my experience, there are four main phases in Kubernetes adoption.</p>
+<p>In the first phase, we create a cluster and learn intricacies of Kube API and different types of resources (e.g., Pods, Ingress, Deployments, StatefulSets, and so on). Once we are comfortable with the way Kubernetes works, we start deploying and managing our applications. By the end of this phase, we can shout &ldquo;<strong>look at me, I have things running in my production Kubernetes cluster, and nothing blew up!</strong>&rdquo; I explained most of this phase in <a href="https://amzn.to/2GvzDjy">The DevOps 2.3 Toolkit: Kubernetes</a>.</p>
+<p>The second phase is often automation. Once we become comfortable with how Kubernetes works and we are running production loads, we can move to automation. We often adopt some form of continuous delivery (CD) or continuous deployment (CDP). We create Pods with the tools we need, we build our software and container images, we run tests, and we deploy to production. When we&rsquo;re finished, most of our processes are automated, and we do not perform manual deployments to Kubernetes anymore. We can say that <strong>things are working and I&rsquo;m not even touching my keyboard</strong>. I did my best to provide some insights into CD and CDP with Kubernetes in <a href="https://amzn.to/2NkIiVi">The DevOps 2.4 Toolkit: Continuous Deployment To Kubernetes</a>.</p>
+<p>The third phase is in many cases related to monitoring, alerting, logging, and scaling. The fact that we can run (almost) anything in Kubernetes and that it will do its best to make it fault tolerant and highly available, does not mean that our applications and clusters are bulletproof. We need to monitor the cluster, and we need alerts that will notify us of potential issues. When we do discover that there is a problem, we need to be able to query metrics and logs of the whole system. We can fix an issue only once we know what the root cause is. In highly dynamic distributed systems like Kubernetes, that is not as easy as it looks.</p>
+<p>Further on, we need to learn how to scale (and de-scale) everything. The number of Pods of an application should change over time to accommodate fluctuations in traffic and demand. Nodes should scale as well to fulfill the needs of our applications.</p>
+<p>Kubernetes already has the tools that provide metrics and visibility into logs. It allows us to create auto-scaling rules. Yet, we might discover that Kuberentes alone is not enough and that we might need to extend our system with additional processes and tools. This phase is the subject of this book. By the time you finish reading it, you&rsquo;ll be able to say that <strong>your clusters and applications are truly dynamic and resilient and that they require minimal manual involvement. We&rsquo;ll try to make our system self-adaptive.</strong></p>
+<p>I mentioned the fourth phase. That, dear reader, is everything else. The last phase is mostly about keeping up with all the other goodies Kubernetes provides. It&rsquo;s about following its roadmap and adapting our processes to get the benefits of each new release.</p>
+<p>Buy it now from <strong><a href="https://amzn.to/2RMKNVT">Amazon</a></strong>, <strong><a href="https://leanpub.com/the-devops-2-5-toolkit">LeanPub</a></strong>, or look for it through your favorite book seller.</p>
+
+                        </div>
+                    </section>
+            <!-- Disqus Inject -->
+                
+            </div>
+            
+        <!-- Footer -->
+            
+                <!-- Footer -->
+    <footer id="footer">
+        <div class="inner">
+            <ul class="icons">
+                
+                    <li><a href="https://www.twitter.com/vfarcic" class="icon alt fa-twitter" target="_blank"><span class="label">Twitter</span></a></li>
+                
+                    <li><a href="https://www.github.com/vfarcic" class="icon alt fa-github" target="_blank"><span class="label">GitHub</span></a></li>
+                
+                    <li><a href="https://www.linkedin.com/in/viktorfarcic/" class="icon alt fa-linkedin" target="_blank"><span class="label">LinkedIn</span></a></li>
+                
+            </ul>
+            <ul class="copyright">
+                <li>&copy; Viktor Farcic</li>
+                
+            </ul>
+        </div>
+    </footer>
+
+            
+        </div>
+
+    <!-- Scripts -->
+        <!-- Scripts -->
+    <!-- jQuery -->
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/jquery.scrolly.min.js"></script>
+    <script src="/js/jquery.scrollex.min.js"></script>
+    <script src="/js/skel.min.js"></script>
+    <script src="/js/util.js"></script>
+
+    
+
+    <!-- Main JS -->
+    <script src="/js/main.js"></script>
+
+    
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-174219852-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+
+    
+
+    </body>
+</html>

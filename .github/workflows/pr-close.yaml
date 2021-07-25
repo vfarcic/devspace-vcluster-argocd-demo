@@ -1,0 +1,25 @@
+name: pr
+on:
+  pull_request:
+    types: [ closed ]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v2
+      with:
+        submodules: recursive
+    - name: Setup Kube config
+      uses: azure/k8s-set-context@v1
+      with:
+        method: kubeconfig
+        kubeconfig: ${{ secrets.KUBE_CONFIG }}
+    - name: Delete preview
+      run: |
+        # Install vCluster
+        curl -s -L "https://github.com/loft-sh/vcluster/releases/latest" | sed -nE 's!.*"([^"]*vcluster-linux-amd64)".*!https://github.com\1!p' | xargs -n 1 curl -L -o vcluster && chmod +x vcluster;
+        sudo mv vcluster /usr/local/bin;
+
+        # Create a cluster
+        vcluster delete devops-toolkit-pr-${{ github.event.pull_request.number }} --namespace prs

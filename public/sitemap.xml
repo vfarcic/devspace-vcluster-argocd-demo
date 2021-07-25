@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  
+  <url>
+    <loc>/posts/</loc>
+    <lastmod>2020-04-23T01:24:49+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/</loc>
+    <lastmod>2020-04-23T01:24:49+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/posts/youtube/</loc>
+    <lastmod>2020-04-23T01:24:49+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/posts/canary/</loc>
+    <lastmod>2018-11-09T01:24:49+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/posts/chaos/</loc>
+    <lastmod>2018-11-09T01:24:49+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/posts/devops-25/</loc>
+    <lastmod>2018-11-09T01:24:49+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/posts/devops-26/</loc>
+    <lastmod>2018-11-09T01:24:49+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/posts/catalog/</loc>
+    <lastmod>2018-11-09T01:24:49+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/posts/devops-24/</loc>
+    <lastmod>2018-08-23T01:24:49+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/posts/devops-23/</loc>
+    <lastmod>2017-12-14T15:17:10+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/posts/devops-22/</loc>
+    <lastmod>2017-09-21T15:17:10+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/posts/devops-21/</loc>
+    <lastmod>2017-09-21T15:12:25+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/posts/devops-20/</loc>
+    <lastmod>2017-09-21T13:31:31+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/categories/</loc>
+  </url>
+  
+  <url>
+    <loc>/tags/</loc>
+  </url>
+  
+</urlset>

@@ -1,0 +1,10 @@
+/creds
+/devspace.yaml
+/kubeconfig.yaml
+
+# Ignore DevSpace cache and log folder
+.devspace/
+
+
+# Ignore DevSpace cache and log folder
+.devspace/

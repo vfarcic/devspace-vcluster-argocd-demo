@@ -1,0 +1,156 @@
+<!DOCTYPE HTML>
+<html>
+
+    <head>
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+	<meta name="description" content="Books and courses dedicated to DevOps practices and tools">
+	<meta name="author" content="Viktor Farcic">
+	<meta name="generator" content="Hugo 0.78.2" />
+	<title>Canary Deployments To Kubernetes Using Istio and Friends &middot; The DevOps Toolkit Series</title>
+	<!-- Stylesheets -->
+	
+	<link rel="stylesheet" href="/css/main.css"/>
+	
+	
+
+	
+
+	<!-- Custom Fonts -->
+	<link href="/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+	
+	<link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
+	<link rel="icon" type="image/x-icon" href="/favicon.ico">
+	
+
+	<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+	<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+	<!--[if lt IE 9]>
+	<script src="js/ie/html5shiv.js"></script>
+	<script src="js/ie/html5shiv.jsrespond.min.js"></script>
+	<![endif]-->
+	
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-174219852-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+
+</head>
+
+    <body>
+
+    <!-- Wrapper -->
+        <div id="wrapper">
+
+            <!-- Header -->
+    <header id="header" class="alt">
+        <a href="/" class="logo"><strong>The DevOps Toolkit</strong> <span>By Viktor Farcic</span></a>
+        <nav>
+            <a href="#menu">Menu</a>
+        </nav>
+    </header>
+
+<!-- Menu -->
+    <nav id="menu">
+        <ul class="links">
+            
+                <li><a href="/">Home</a></li>
+            
+
+        </ul>
+        <ul class="actions vertical">
+            
+            
+        </ul>
+    </nav>
+
+        <!-- Main -->
+            <div id="main" class="alt">
+
+                
+                    <section id="one">
+                        <div class="inner">
+                            <header class="major">
+                                <h1>Canary Deployments To Kubernetes Using Istio and Friends</h1>
+                            </header>
+                            
+                            <h2 id="udemy-course">Udemy Course</h2>
+<p>Preview it or buy it now at <strong><a href="https://www.udemy.com/course/canary-deployments-to-kubernetes-using-istio-and-friends/?referralCode=75549ECDBC41B27D94C4">Udemy</a></strong>.</p>
+<p><img src="/img/canary-smaller.jpg#floatright" alt=""></p>
+<p>Kubernetes provides a few &ldquo;decent&rdquo; deployment strategies out of the box. However, they might not be enough. Canary is missing.</p>
+<p>What is the canary deployments process? How should we implement it in Kubernetes? Which tools should we use? We&rsquo;ll try to answer those and quite a few other questions.</p>
+<p>This talk will guide you through the journey of practical implementation of canary deployments. We&rsquo;ll use Kubernetes because it makes many things easier than any other platform before it. We&rsquo;ll need service mesh because, after all, most of the canary process is controlled through networking and changes to Kubernetes definitions. We&rsquo;ll need a few other tools, and we might even need to write our own scripts to glue everything into a cohesive process.</p>
+<p>The end result will be a set of instructions and a live demo of a fully operational canary deployment process that can be plugged into any continuous delivery tool. We&rsquo;ll define the process, and we&rsquo;ll choose some tools. Nevertheless, we&rsquo;ll do all that while making the process agnostic and applicable to any toolset you might pick.</p>
+<p>Preview it or buy it now at <strong><a href="https://www.udemy.com/course/canary-deployments-to-kubernetes-using-istio-and-friends/?referralCode=75549ECDBC41B27D94C4">Udemy</a></strong>.</p>
+
+                        </div>
+                    </section>
+            <!-- Disqus Inject -->
+                
+            </div>
+            
+        <!-- Footer -->
+            
+                <!-- Footer -->
+    <footer id="footer">
+        <div class="inner">
+            <ul class="icons">
+                
+                    <li><a href="https://www.twitter.com/vfarcic" class="icon alt fa-twitter" target="_blank"><span class="label">Twitter</span></a></li>
+                
+                    <li><a href="https://www.github.com/vfarcic" class="icon alt fa-github" target="_blank"><span class="label">GitHub</span></a></li>
+                
+                    <li><a href="https://www.linkedin.com/in/viktorfarcic/" class="icon alt fa-linkedin" target="_blank"><span class="label">LinkedIn</span></a></li>
+                
+            </ul>
+            <ul class="copyright">
+                <li>&copy; Viktor Farcic</li>
+                
+            </ul>
+        </div>
+    </footer>
+
+            
+        </div>
+
+    <!-- Scripts -->
+        <!-- Scripts -->
+    <!-- jQuery -->
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/jquery.scrolly.min.js"></script>
+    <script src="/js/jquery.scrollex.min.js"></script>
+    <script src="/js/skel.min.js"></script>
+    <script src="/js/util.js"></script>
+
+    
+
+    <!-- Main JS -->
+    <script src="/js/main.js"></script>
+
+    
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-174219852-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+
+    
+
+    </body>
+</html>

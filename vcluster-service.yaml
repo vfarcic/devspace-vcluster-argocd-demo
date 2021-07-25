@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: a-team-cluster
+spec:
+  selector:
+    app: vcluster
+    release: a-team
+  ports:
+    - name: https
+      port: 443
+      targetPort: 8443
+      protocol: TCP
+  type: LoadBalancer

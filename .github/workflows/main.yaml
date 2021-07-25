@@ -1,0 +1,40 @@
+name: main
+on:
+  push:
+    branches:
+    - master
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v2
+      with:
+        submodules: recursive
+    - name: Set up QEMU
+      uses: docker/setup-qemu-action@v1
+    - name: Set up Docker Buildx
+      uses: docker/setup-buildx-action@v1
+    - name: Login to DockerHub
+      uses: docker/login-action@v1 
+      with:
+        username: ${{ secrets.DOCKERHUB_USERNAME }}
+        password: ${{ secrets.DOCKERHUB_TOKEN }}
+    - name: Build and push container image
+      uses: docker/build-push-action@v2
+      with:
+        push: true
+        tags: |
+          ${{ secrets.DOCKERHUB_USERNAME }}/github-actions-demo:latest
+          ${{ secrets.DOCKERHUB_USERNAME }}/github-actions-demo:${{ github.sha }}
+    - uses: azure/k8s-set-context@v1
+      with:
+        method: kubeconfig
+        kubeconfig: ${{ secrets.KUBE_CONFIG }}
+    - name: Deploy the app
+      run: |
+        cd kustomize/overlays/production
+        kustomize edit set image ${{ secrets.DOCKERHUB_USERNAME }}/github-actions-demo=${{ secrets.DOCKERHUB_USERNAME }}/github-actions-demo:$GITHUB_SHA
+        kustomize build | kubectl apply --filename -
+        kubectl --namespace production rollout status deployment github-actions-demo
+ 

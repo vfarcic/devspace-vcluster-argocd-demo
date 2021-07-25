@@ -1,0 +1,52 @@
+name: pr
+on:
+  pull_request:
+    branches:
+    - master
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v2
+      with:
+        submodules: recursive
+    - name: Set up QEMU
+      uses: docker/setup-qemu-action@v1
+    - name: Set up Docker Buildx
+      uses: docker/setup-buildx-action@v1
+    - name: Login to DockerHub
+      uses: docker/login-action@v1 
+      with:
+        username: ${{ secrets.DOCKERHUB_USERNAME }}
+        password: ${{ secrets.DOCKERHUB_TOKEN }}
+    - name: Build and push container image
+      uses: docker/build-push-action@v2
+      with:
+        push: true
+        tags: |
+          ${{ secrets.DOCKERHUB_USERNAME }}/devops-toolkit:pr-${{ github.event.pull_request.number }}
+    - name: Setup Kube config
+      uses: azure/k8s-set-context@v1
+      with:
+        method: kubeconfig
+        kubeconfig: ${{ secrets.KUBE_CONFIG }}
+    - name: Deploy preview
+      run: |
+        # Install vCluster
+        curl -s -L "https://github.com/loft-sh/vcluster/releases/latest" | sed -nE 's!.*"([^"]*vcluster-linux-amd64)".*!https://github.com\1!p' | xargs -n 1 curl -L -o vcluster && chmod +x vcluster;
+        sudo mv vcluster /usr/local/bin;
+
+        # Create a cluster
+        vcluster create devops-toolkit-pr-${{ github.event.pull_request.number }} --namespace prs --expose 
+        vcluster connect devops-toolkit-pr-${{ github.event.pull_request.number }} --namespace prs
+        export KUBECONFIG=$PWD/kubeconfig.yaml
+
+        # Deploy
+        cd kustomize/overlays/preview
+        kustomize edit set image vfarcic/devops-toolkit=${{ secrets.DOCKERHUB_USERNAME }}/devops-toolkit:pr-${{ github.event.pull_request.number }}
+        kustomize build | kubectl apply --filename -
+        kubectl rollout status deployment devops-toolkit
+    - name: Test
+      run: |
+        echo "I was to lazy to write tests"

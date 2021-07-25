@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>The DevOps Toolkit Series</title>
+    <link>/</link>
+    <description>Recent content on The DevOps Toolkit Series</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 23 Apr 2020 01:24:49 +0200</lastBuildDate><atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>The YouTube Channel</title>
+      <link>/posts/youtube/</link>
+      <pubDate>Thu, 23 Apr 2020 01:24:49 +0200</pubDate>
+      
+      <guid>/posts/youtube/</guid>
+      <description>DevOps Toolkit 
+We started the YouTube channel out of desire to help others learn the tools and the processes that we should be using and applying in our day-to-day jobs.
+We want to help you make decisions. What works well, what doesn&amp;rsquo;t work, why you should choose one tool over the other, and how to get up-to-speed quickly. Which tool works the best for a given task? What should we explore in more depth, and what is a waste of time?</description>
+    </item>
+    
+    <item>
+      <title>Canary Deployments To Kubernetes Using Istio and Friends</title>
+      <link>/posts/canary/</link>
+      <pubDate>Fri, 09 Nov 2018 01:24:49 +0200</pubDate>
+      
+      <guid>/posts/canary/</guid>
+      <description>Udemy Course Preview it or buy it now at Udemy.
+Kubernetes provides a few &amp;ldquo;decent&amp;rdquo; deployment strategies out of the box. However, they might not be enough. Canary is missing.
+What is the canary deployments process? How should we implement it in Kubernetes? Which tools should we use? We&amp;rsquo;ll try to answer those and quite a few other questions.
+This talk will guide you through the journey of practical implementation of canary deployments.</description>
+    </item>
+    
+    <item>
+      <title>Kubernetes Chaos Engineering</title>
+      <link>/posts/chaos/</link>
+      <pubDate>Fri, 09 Nov 2018 01:24:49 +0200</pubDate>
+      
+      <guid>/posts/chaos/</guid>
+      <description>Kubernetes Chaos Engineering With Chaos Toolkit And Istio The video course is available in Udemy.
+The book is available from Amazon, LeanPub, and (probably) through your favorite book seller.
+There are very few things as satisfying as destruction, especially when we&amp;rsquo;re frustrated.
+How often did it happen that you have an issue that you cannot solve and that you just want to scream or destroy things? Did you ever have a problem in production that is negatively affecting a lot of users?</description>
+    </item>
+    
+    <item>
+      <title>The DevOps 2.5 Toolkit</title>
+      <link>/posts/devops-25/</link>
+      <pubDate>Fri, 09 Nov 2018 01:24:49 +0200</pubDate>
+      
+      <guid>/posts/devops-25/</guid>
+      <description>Monitoring, Logging, and Auto-Scaling Kubernetes Making Resilient, Self-Adaptive, And Autonomous Kubernetes Clusters Buy it now from Amazon, LeanPub, or look for it through your favorite book seller.
+What do we do in Kubernetes after we master deployments and automate all the processes? We dive into monitoring, logging, auto-scaling, and other topics aimed at making our cluster resilient, self-sufficient, and self-adaptive.
+Kubernetes is probably the biggest project we know. It is vast, and yet many think that after a few weeks or months of reading and practice they know all there is to know about it.</description>
+    </item>
+    
+    <item>
+      <title>The DevOps 2.6 Toolkit</title>
+      <link>/posts/devops-26/</link>
+      <pubDate>Fri, 09 Nov 2018 01:24:49 +0200</pubDate>
+      
+      <guid>/posts/devops-26/</guid>
+      <description>Jenkins X Cloud-Native Kubernetes-First Continuous Delivery This book was removed from sales and the repository with the manuscript (vfarcic/devops26) has been donated to the community.</description>
+    </item>
+    
+    <item>
+      <title>The DevOps Toolkit</title>
+      <link>/posts/catalog/</link>
+      <pubDate>Fri, 09 Nov 2018 01:24:49 +0200</pubDate>
+      
+      <guid>/posts/catalog/</guid>
+      <description>Catalog, Patterns, And Blueprints The video course is available in Udemy.
+The book is currently available only from LeanPub.
+Unlike my other books and courses where I typically dive into a single tool or a single process, this time, I chose a different approach. Instead of going to great lengths trying to help someone become proficient in one thing, this time, I am trying to give you a quick introduction into many different tools and processes.</description>
+    </item>
+    
+    <item>
+      <title>The DevOps 2.4 Toolkit</title>
+      <link>/posts/devops-24/</link>
+      <pubDate>Thu, 23 Aug 2018 01:24:49 +0200</pubDate>
+      
+      <guid>/posts/devops-24/</guid>
+      <description>Continuous Deployment To Kubernetes This book was removed from sales and the repository with the manuscript (vfarcic/devops24) has been donated to the community.</description>
+    </item>
+    
+    <item>
+      <title>The DevOps 2.3 Toolkit</title>
+      <link>/posts/devops-23/</link>
+      <pubDate>Thu, 14 Dec 2017 15:17:10 +0200</pubDate>
+      
+      <guid>/posts/devops-23/</guid>
+      <description>Kubernetes Deploying and managing highly-available and fault-tolerant applications at scale Buy it now from Amazon, LeanPub, or look for it through your favorite book seller.
+The goal of this book is not to convince you to adopt Kubernetes but to provide a detailed overview of its features. I want you to become confident in your Kubernetes knowledge and only then choose whether to embrace it. That is, unless you already made up your mind and stumbled upon this book in search of Kubernetes guidance.</description>
+    </item>
+    
+    <item>
+      <title>The DevOps 2.2 Toolkit</title>
+      <link>/posts/devops-22/</link>
+      <pubDate>Thu, 21 Sep 2017 15:17:10 +0200</pubDate>
+      
+      <guid>/posts/devops-22/</guid>
+      <description>Building Self-Adaptive And Self-Healing Docker Clusters This book is based on very old technology and the code behind it is not maintained anymore.</description>
+    </item>
+    
+    <item>
+      <title>The DevOps 2.1 Toolkit</title>
+      <link>/posts/devops-21/</link>
+      <pubDate>Thu, 21 Sep 2017 15:12:25 +0200</pubDate>
+      
+      <guid>/posts/devops-21/</guid>
+      <description>Building, testing, deploying, and monitoring services inside Docker Swarm clusters This book is based on very old technology and the code behind it is not maintained anymore.</description>
+    </item>
+    
+    <item>
+      <title>The DevOps 2.0 Toolkit</title>
+      <link>/posts/devops-20/</link>
+      <pubDate>Thu, 21 Sep 2017 13:31:31 +0200</pubDate>
+      
+      <guid>/posts/devops-20/</guid>
+      <description>Automating the Continuous Deployment Pipeline with Containerized Microservices This book is based on very old technology and the code behind it is not maintained anymore.</description>
+    </item>
+    
+  </channel>
+</rss>
