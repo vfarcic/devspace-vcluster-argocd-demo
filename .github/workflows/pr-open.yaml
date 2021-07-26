@@ -41,7 +41,8 @@ jobs:
         vcluster create devops-toolkit-pr-${{ github.event.pull_request.number }} --namespace prs --expose 
         vcluster connect devops-toolkit-pr-${{ github.event.pull_request.number }} --namespace prs
         export KUBECONFIG=$PWD/kubeconfig.yaml
-        cat $KUBECONFIG
+        sleep 5
+        kubectl get ingresses
 
         # Deploy
         cd kustomize/overlays/preview
