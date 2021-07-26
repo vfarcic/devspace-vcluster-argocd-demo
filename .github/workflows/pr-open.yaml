@@ -50,10 +50,10 @@ jobs:
         kustomize build | kubectl apply --filename -
         kubectl rollout status deployment devops-toolkit
     - name: Comment
-      uses: github-actions-up-and-running/pr-comment@v1.0.0
+      uses: exercism/pr-commenter-action@v1.1.0
       with:
-        repo-token: ${{ secrets.GH_TOKEN }}
-        message: Nice PR!👍
+        github-token: "${{ github.token }}"
+        config-file: ".github/pr-commenter.yml"
     - name: Test
       run: |
         echo "I was to lazy to write tests"

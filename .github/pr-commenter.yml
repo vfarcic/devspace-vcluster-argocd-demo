@@ -1,0 +1,17 @@
+comment:
+  on-update: recreate
+  header: |
+    Thank you for contributing to this repository :tada:.
+
+  footer: |
+    ---
+    Automated comment created by [PR Commenter](https://github.com/exercism/pr-commenter-action) :robot:.
+
+  snippets:
+    - id: any-markdown-file-changed
+      files:
+        - '*.md'
+        - '**/*.md'
+      body: |
+        It looks like you're changing a Markdown file.
+        Make sure your changes follow our [language guidelines](some-link) when writing documentation.
