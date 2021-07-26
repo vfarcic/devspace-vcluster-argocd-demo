@@ -25,8 +25,8 @@ jobs:
       with:
         push: true
         tags: |
-          ${{ secrets.DOCKERHUB_USERNAME }}/github-actions-demo:latest
-          ${{ secrets.DOCKERHUB_USERNAME }}/github-actions-demo:${{ github.sha }}
+          ${{ secrets.DOCKERHUB_USERNAME }}/devops-toolkit:latest
+          ${{ secrets.DOCKERHUB_USERNAME }}/devops-toolkit:${{ github.sha }}
     - uses: azure/k8s-set-context@v1
       with:
         method: kubeconfig
@@ -34,7 +34,7 @@ jobs:
     - name: Deploy the app
       run: |
         cd kustomize/overlays/production
-        kustomize edit set image ${{ secrets.DOCKERHUB_USERNAME }}/github-actions-demo=${{ secrets.DOCKERHUB_USERNAME }}/github-actions-demo:$GITHUB_SHA
+        kustomize edit set image ${{ secrets.DOCKERHUB_USERNAME }}/devops-toolkit=${{ secrets.DOCKERHUB_USERNAME }}/devops-toolkit:$GITHUB_SHA
         kustomize build | kubectl apply --filename -
-        kubectl --namespace production rollout status deployment github-actions-demo
+        kubectl --namespace production rollout status deployment devops-toolkit
  
