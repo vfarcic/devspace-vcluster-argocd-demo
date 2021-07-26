@@ -52,7 +52,8 @@ jobs:
     - name: Comment
       uses: exercism/pr-commenter-action@v1.1.0
       with:
-        github-token: "${{ secrets.GH_TOKEN }}"
+        github-token: "${{ github.token }}"
+        # github-token: "${{ secrets.GH_TOKEN }}"
         config-file: ".github/pr-commenter.yml"
     - name: Test
       run: |
