@@ -35,6 +35,8 @@ jobs:
       run: |
         ls -l /
         cd /tmp
+        echo "111"
+        echo "git clone https://github.com/${{ secrets.GH_ORG }}/devspace-vcluster-argocd-prod.git"
         git clone https://github.com/${{ secrets.GH_ORG }}/devspace-vcluster-argocd-prod.git
         cd devspace-vcluster-argocd-prod
         cat production/devops-toolkit.yaml | sed -e "s@- ${{ secrets.DOCKERHUB_USERNAME }}/devops-toolkit:.*@- ${{ secrets.DOCKERHUB_USERNAME }}/devops-toolkit:${{ github.sha }}@g" | tee production/devops-toolkit.yaml
