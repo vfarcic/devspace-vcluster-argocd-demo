@@ -15,4 +15,4 @@ spec:
             name: devops-toolkit
             port:
               number: 80
-    host: devopstoolkitseries.com
+    host: devops-toolkit.168.61.47.186.nip.io
