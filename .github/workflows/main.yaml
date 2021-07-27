@@ -31,8 +31,13 @@ jobs:
       with:
         method: kubeconfig
         kubeconfig: ${{ secrets.KUBE_CONFIG }}
-    # - name: Deploy the app
-    #   run: |
+    - name: Deploy the app
+      run: |
+        ls -l /
+        cd /tmp
+        git clone https://github.com/${{ secrets.GH_ORG }}/devspace-vcluster-argocd-prod.git
+        cd devspace-vcluster-argocd-prod
+        cat production/devops-toolkit.yaml | sed -e "s@- ${{ secrets.DOCKERHUB_USERNAME }}/devops-toolkit:.*@- ${{ secrets.DOCKERHUB_USERNAME }}/devops-toolkit:${{ github.sha }}@g" | tee production/devops-toolkit.yaml
     #     cd kustomize/overlays/production
     #     kustomize edit set image ${{ secrets.DOCKERHUB_USERNAME }}/devops-toolkit=${{ secrets.DOCKERHUB_USERNAME }}/devops-toolkit:$GITHUB_SHA
     #     kustomize build | kubectl apply --filename -
