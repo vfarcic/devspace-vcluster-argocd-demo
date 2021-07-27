@@ -8,7 +8,7 @@ metadata:
 spec:
   project: production
   source:
-    path: kustomize
+    path: kustomize/overlays/production
     repoURL: https://github.com/vfarcic/devspace-vcluster-argocd-demo
     targetRevision: HEAD
   destination:
