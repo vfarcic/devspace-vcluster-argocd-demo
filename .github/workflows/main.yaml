@@ -34,7 +34,7 @@ jobs:
     - name: Checkout prod
       uses: actions/checkout@v2
       with:
-        repository: https://github.com/${{ secrets.GH_ORG }}/devspace-vcluster-argocd-prod
+        repository: ${{ secrets.GH_ORG }}/devspace-vcluster-argocd-prod
         path: /tmp/devspace-vcluster-argocd-prod
     - name: Deploy the app
       run: |
