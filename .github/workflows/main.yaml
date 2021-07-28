@@ -35,6 +35,8 @@ jobs:
       uses: actions/checkout@v2
       with:
         repository: ${{ secrets.GH_ORG }}/devspace-vcluster-argocd-prod
+        persist-credentials: false
+        fetch-depth: 0
     - name: Update manifests
       run: |
         cat production/devops-toolkit.yaml | sed -e "s@- ${{ secrets.DOCKERHUB_USERNAME }}/devops-toolkit:.*@- ${{ secrets.DOCKERHUB_USERNAME }}/devops-toolkit:${{ github.sha }}@g" | tee production/devops-toolkit.yaml
