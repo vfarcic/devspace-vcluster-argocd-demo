@@ -49,12 +49,6 @@ jobs:
         kustomize edit set image vfarcic/devops-toolkit=${{ secrets.DOCKERHUB_USERNAME }}/devops-toolkit:pr-${{ github.event.pull_request.number }}
         kustomize build | kubectl apply --filename -
         kubectl rollout status deployment devops-toolkit
-    - name: Comment
-      uses: exercism/pr-commenter-action@v1.1.0
-      with:
-        github-token: "${{ github.token }}"
-        # github-token: "${{ secrets.GH_TOKEN }}"
-        config-file: ".github/pr-commenter.yml"
     - name: Test
       run: |
         echo "I was to lazy to write tests"
