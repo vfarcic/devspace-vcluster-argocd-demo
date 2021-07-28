@@ -35,12 +35,11 @@ jobs:
       uses: actions/checkout@v2
       with:
         repository: ${{ secrets.GH_ORG }}/devspace-vcluster-argocd-prod
-        path: /tmp/devspace-vcluster-argocd-prod
+        # path: /tmp/devspace-vcluster-argocd-prod
     - name: Deploy the app
       run: |
-        ls -l /tmp
+        ls -l 
         echo "111"
-        ls -l /tmp/devspace-vcluster-argocd-prod
     #     cd /tmp
     #     git clone https://github.com/${{ secrets.GH_ORG }}/devspace-vcluster-argocd-prod.git
     #     cd devspace-vcluster-argocd-prod
