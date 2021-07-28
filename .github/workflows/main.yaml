@@ -42,6 +42,7 @@ jobs:
         git config --global user.name "${{ secrets.GH_ORG }}"
         git add .
         git commit -m "Promoting devops-toolkit ${{ github.sha }}"
+        git remote -v
         git push
     - name: Push prod
       uses: ad-m/github-push-action@master
