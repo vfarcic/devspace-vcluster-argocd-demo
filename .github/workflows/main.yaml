@@ -31,17 +31,25 @@ jobs:
       with:
         method: kubeconfig
         kubeconfig: ${{ secrets.KUBE_CONFIG }}
+    - name: Checkout prod
+      uses: actions/checkout@v2
+      with:
+        repository: https://github.com/${{ secrets.GH_ORG }}/devspace-vcluster-argocd-prod
+        path: /tmp/devspace-vcluster-argocd-prod
     - name: Deploy the app
       run: |
-        cd /tmp
-        git clone https://github.com/${{ secrets.GH_ORG }}/devspace-vcluster-argocd-prod.git
-        cd devspace-vcluster-argocd-prod
-        cat production/devops-toolkit.yaml | sed -e "s@- ${{ secrets.DOCKERHUB_USERNAME }}/devops-toolkit:.*@- ${{ secrets.DOCKERHUB_USERNAME }}/devops-toolkit:${{ github.sha }}@g" | tee production/devops-toolkit.yaml
-        git config --global user.email "${{ secrets.GH_ORG }}@farcic.com"
-        git config --global user.name "${{ secrets.GH_ORG }}"
-        git add .
-        git commit -m "Promoting devops-toolkit ${{ github.sha }}"
-        git push
+        ls -l /tmp
+        echo "111"
+        ls -l /tmp/devspace-vcluster-argocd-prod
+    #     cd /tmp
+    #     git clone https://github.com/${{ secrets.GH_ORG }}/devspace-vcluster-argocd-prod.git
+    #     cd devspace-vcluster-argocd-prod
+    #     cat production/devops-toolkit.yaml | sed -e "s@- ${{ secrets.DOCKERHUB_USERNAME }}/devops-toolkit:.*@- ${{ secrets.DOCKERHUB_USERNAME }}/devops-toolkit:${{ github.sha }}@g" | tee production/devops-toolkit.yaml
+    #     git config --global user.email "${{ secrets.GH_ORG }}@farcic.com"
+    #     git config --global user.name "${{ secrets.GH_ORG }}"
+    #     git add .
+    #     git commit -m "Promoting devops-toolkit ${{ github.sha }}"
+    #     git push
     #     cd kustomize/overlays/production
     #     kustomize edit set image ${{ secrets.DOCKERHUB_USERNAME }}/devops-toolkit=${{ secrets.DOCKERHUB_USERNAME }}/devops-toolkit:$GITHUB_SHA
     #     kustomize build | kubectl apply --filename -
