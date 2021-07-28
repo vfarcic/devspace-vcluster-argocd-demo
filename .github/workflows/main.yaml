@@ -47,7 +47,7 @@ jobs:
     - name: Push prod
       uses: ad-m/github-push-action@master
       with:
-        github_token: ${{ secrets.GITHUB_TOKEN }}
+        github_token: ${{ secrets.GH_TOKEN }}
         # branch: ${{ github.ref }}
         repository: ${{ secrets.GH_ORG }}/devspace-vcluster-argocd-prod
     #     git push
