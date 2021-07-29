@@ -27,10 +27,6 @@ jobs:
         tags: |
           ${{ secrets.DOCKERHUB_USERNAME }}/devops-toolkit:latest
           ${{ secrets.DOCKERHUB_USERNAME }}/devops-toolkit:${{ github.sha }}
-    - uses: azure/k8s-set-context@v1
-      with:
-        method: kubeconfig
-        kubeconfig: ${{ secrets.KUBE_CONFIG }}
     - name: Checkout prod
       uses: actions/checkout@v2
       with:
