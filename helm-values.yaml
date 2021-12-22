@@ -1,3 +1,3 @@
 syncer:
   extraArgs:
-  - --tls-san=143.244.214.91
+  - --tls-san=20.61.137.31
